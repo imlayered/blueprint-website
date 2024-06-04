@@ -1,63 +1,71 @@
-.blueprint-navbar, .blueprint-navbar-mobile {
-  z-index: 100 !important;
-  background-color: #08090a90;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+.backdrop-blur {
+  background-color: #00000059;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-color: #ffffff23;
+  color: rgba(255, 255, 255, .75);
+  background: hex(#00000059) !important;
+}
+.backdrop-blur:hover, backdrop-blur:active {
+  background-color: #0000007e !important;
+  border-color: #ffffff35 !important;
+  color: rgba(255, 255, 255, .95) !important;
 }
 
-[data-bs-theme=light] .blueprint-navbar, [data-bs-theme=light] .blueprint-navbar-mobile {
-  background-color: #cad2d890 !important;
+.img-dim:hover {
+  opacity: .7;
+}
+.img-dim {
+  transition: opacity .3s;
 }
 
-.nav-dropdown-btn { background-color: transparent !important; }
-[data-bs-theme=light] .invert-light { filter: invert() }
-
-.mobile-theme-switcher {
-  display: flex !important;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.mobile-theme-switcher-btn {
-  width: 33.33% !important;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.product-image {
+  aspect-ratio: 16/9;
+  object-fit: cover
 }
 
-/* Scrollbar code, somewhat broken; by Auri (imlayered) */
-::-webkit-scrollbar {
-  width: 10px; 
-  background-color: #2b3035; 
+.bp-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, #ffffff10 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
+}
+.bp-fade {
+  background-image: linear-gradient(to bottom, #21252900, #212529);
 }
 
-::-webkit-scrollbar-track {
-  background: #2b3035; 
+[data-bs-theme=light] .bp-fade { background-image: linear-gradient(to bottom, #ffffff00, #ffffff); }
+[data-bs-theme=light] .bp-grid { 
+  background-image:
+    linear-gradient(to right, #00000010 1px, transparent 1px),
+    linear-gradient(to bottom, #00000010 1px, transparent 1px);
+}
+[data-bs-theme=light] .byte-img { content: url("/.assets/storage/misc/png/10.png"); }
+[data-bs-theme=light] .byte-confused-img { content: url("/.assets/storage/misc/png/11.png"); }
+[data-bs-theme=light] .byte-txt { color: #000 !important }
+[data-bs-theme=light] .sort-button { background-color: #bbc1c7 !important }
+
+.buy-btn i { padding: 4px; font-size: 18px }
+[data-bs-theme=light] .buy-btn { background-color: #ffffff23; }
+[data-bs-theme=light] .buy-btn:hover, [data-bs-theme=light] .buy-btn:active { background-color: #ffffff40 !important; }
+[data-bs-theme=dark] .buy-btn { background-color: #00000059; }
+[data-bs-theme=dark] .buy-btn:hover, [data-bs-theme=dark] .buy-btn:active { background-color: #0000007e !important; }
+
+.buy-btn {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-color: transparent !important;
+  border-top: none !important;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 5px; 
-  mix-blend-mode: multiply; 
+.buy-btn:focus-visible {
+  box-shadow: none !important
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.author-tag {
+  opacity: .5;
+  font-size: 15px;
 }
-
-
-
-
-.mobile-theme-switcher-btn.active i { opacity: 1 !important; }
-[data-bs-theme=light] .mobile-theme-switcher-btn.active i { color: #272727 !important }
-[data-bs-theme=light] .theme-switcher-btn.active,
-[data-bs-theme=light] .theme-switcher-btn:active { color: #272727 !important }
-
-[data-bs-theme=dark] .theme-switcher-btn.active,
-[data-bs-theme=dark] .theme-switcher-btn:active,
-[data-bs-theme=dark] .mobile-theme-switcher-btn.active,
-[data-bs-theme=dark] .mobile-theme-switcher-btn:active { background-color: #2b3035 !important }
-
-[data-bs-theme=light] .theme-switcher-btn.active,
-[data-bs-theme=light] .theme-switcher-btn:active,
-[data-bs-theme=light] .mobile-theme-switcher-btn.active,
-[data-bs-theme=light] .mobile-theme-switcher-btn:active { background-color: #dfdfdf !important }
